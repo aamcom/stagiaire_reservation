@@ -1,0 +1,32 @@
+table
+{
+	border-collapse: collapse;
+	margin-top: 30px;
+}
+th, td
+{
+	border: solid black 1px;
+	width: 15%;
+	padding-left: 3px;
+	padding-right: 2px;
+	margin-top: 50px;
+}
+caption
+{
+	border: black 2px;
+	border-bottom: solid black 1px;
+	font-size: 200%;
+}
+#somme
+{
+	border: solid black 2px;
+}
+#dateform
+{
+	text-align: center;
+}
+#new_res_tab
+{
+	margin-top: 75px;
+	margin-bottom: 50px;
+}
