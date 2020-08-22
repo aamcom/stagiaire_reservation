@@ -1,6 +1,5 @@
 <?php
 			include("config.php");
-			include("menu.php");
 			try
 			{
 				$bdd = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $login, $password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
