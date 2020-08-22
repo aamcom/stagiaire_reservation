@@ -30,3 +30,24 @@ caption
 	margin-top: 75px;
 	margin-bottom: 50px;
 }
+ul
+{
+	position: fixed;
+	top: 0;
+	right:0;
+	background-color: lightgrey;
+	width: 15%;
+	border: solid black 1px;
+	margin-top: 0px;
+	margin-left:0px;
+	padding-left:0px;
+	position: fixed;
+}
+li
+{
+	list-style: none;
+}
+.content
+{
+	margin-top: 40px;
+}

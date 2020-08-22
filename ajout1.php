@@ -6,18 +6,24 @@ if (isset($_POST['nom']) AND ($_POST['email']) AND ($_POST['people']) AND ($_POS
 
 	if (preg_match("#^[a-z0-9.-_]+@[a-z0-9.-_]{2,}\.[a-z]{2,4}$#", $c_email))
 	{
-		$dt = htmlspecialchars($_POST['datediner']);
-		$dt_prep = new DateTime($dt);
-		$timeToAdd = 2;
-		$dt_prep->add(new DateInterval("PT{$timeToAdd}H"));
-		$dt_to = $dt_prep->format('Y-m-d H:i:s');
+		$date = htmlspecialchars($_POST['datediner']);
+		$time = htmlspecialchars($_POST['heurediner']);
+		$dt = date('Y-m-d H:i:s', strtotime("$date $time"));
+
+		$dt_to_prep = new DateTime($dt);
+		$timeToAdd1 = 2;
+		$dt_to_prep->add(new DateInterval("PT{$timeToAdd1}H"));
+		$dt_to = $dt_to_prep->format('Y-m-d H:i:s');
+
 		$people = htmlspecialchars($_POST['people']);
 		$total = htmlspecialchars($_POST['montant']);
 		$etat = $_POST['etat'];
 		$c_lname = htmlspecialchars($_POST['nom']);
+
 		$now = date_create("Europe/Paris");
 		$created = date_format($now, "Y-m-d H:i:s");
-		//echo "dt : $dt <br>dt_to : $dt_to <br>people : $people <br>total : $total <br>etat : $etat <br>lname : $c_lname <br>email : $c_email <br>created on : $created <br>";
+
+		//echo "dt : $dt <br>dt_to : $dt_to <br>people : $people <br>total : $total <br>etat : $etat <br>lname : $c_lname <br>email : $c_email <br>created on : $created <br>date : $date <br> time : $time<br>";
 		try
 		{
 			$bdd = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $login, $password, array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
