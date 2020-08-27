@@ -14,6 +14,7 @@
 				<tr>
 					<th>Date de réservation</th>
 					<th><label for='nom'>Nom</label></th>
+					<th><label for='prenom'>Prénom</label></th>
 					<th><label for='email'>Email</label></th>
 					<th><label for='people'>Participants</label></th>
 					<th><label for='montant'>Montant</label></th>
@@ -24,6 +25,7 @@
 				<tr>
 					<td>X</td>
 					<td><input type='text' name='nom'></td>
+					<td><input type='text' name='prenom'></td>
 					<td><input type='text' name='email'></td>
 					<td><input type='number' name='people' value='1' min='1'></td>
 					<td><input type='number' name='montant'></td>
