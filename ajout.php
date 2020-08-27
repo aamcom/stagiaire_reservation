@@ -42,6 +42,7 @@
 				</tr>
 				</form>
 			</table>
+			<a href="reservations.php">Annuler</a>
 		</nav>
 	</body>
 </html>
