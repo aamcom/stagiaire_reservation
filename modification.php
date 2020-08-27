@@ -35,7 +35,7 @@
 						<th><label for='email'>Email</label></th>
 						<th><label for='people'>Participants</label></th>
 						<th><label for='montant'>Montant</label></th>
-						<th><label for='datediner'>Date du dîner<br>(aaaa-mm-jj)</label></th>
+						<th><label for='datediner'>Date du dîner<br>(aaaa-mm-jj)</label><label for='heurediner'>(hh:mm:ss)</label></th>
 						<th><label for='etat'>Etat</label></th>
 						<th></th>
 					</tr>
@@ -45,7 +45,7 @@
 						<td><input type="text" name="email" value="<?php echo $donnees['c_email'];?>"></td>
 						<td><input type="number" name="people" value="<?php echo $donnees['people'];?>" min="1"></td>
 						<td><input type="number" name="montant" value="<?php echo $donnees['total'];?>"></td>
-						<td><input type="datetime" name="datediner" value="<?php echo $donnees['dt'];?>"></td>
+						<td><input type="datetime" name="datediner" value="<?php $datetime = new DateTime($donnees['dt']); $date = $datetime->format('Y-m-d'); echo $date;?>"><input type="time" name="heurediner" value="<?php $time = $datetime->format('H:i:s'); echo $time;?>"></td>
 						<td>
 							<select name ="etat" id="etat">
 								<optgroup label="etat">
