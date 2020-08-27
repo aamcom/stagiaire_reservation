@@ -42,7 +42,7 @@ if (isset($_POST['nom']) AND ($_POST['email']) AND ($_POST['people']) AND ($_POS
 			"id" => $_GET['idligne']
 		));
 		echo 'Réservation modifiée.';
-		header('Refresh:5;url="reservations.php"');
+		header('Refresh:2;url="reservations.php"');
 	}
 	else
 	{
