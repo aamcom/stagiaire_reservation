@@ -45,7 +45,7 @@ if (isset($_POST['nom']) AND ($_POST['email']) AND ($_POST['people']) AND ($_POS
 			'c_email' => $c_email
 			));
 		echo "La réservation a bien été ajoutée.";
-		header('Refresh:3;url="reservations.php"');
+		header('Refresh:2;url="reservations.php"');
 	}
 	else
 	{
